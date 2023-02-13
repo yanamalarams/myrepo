@@ -1,0 +1,25 @@
+//Maven Installation on t2.micro instance
+
+
+
+sudo su -
+
+
+yum install java-1.8.0-openjdk-devel -y
+yum install wget unzip -y
+
+
+cd /opt
+
+wget https://dlcdn.apache.org/maven/maven-3/3.8.5/binaries/apache-maven-3.8.5-bin.zip
+
+unzip apache-maven-3.8.5.zip
+
+echo "export M2_HOME=/opt/apache-maven-3.8.5" >> ~/.bash_profile
+
+
+echo 'export PATH=$PATH:$M2_HOME/bin' >> ~/.bash_profile
+
+source ~/.bash_profile
+----------------------------------------------------
+https://github.com/MithunTechnologiesDevops
